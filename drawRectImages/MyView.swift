@@ -14,8 +14,11 @@ class MyView: UIView {
             return
         }
         
-        backgroundColor = UIColor.random
-        backgroundColor?.setFill()
-        ctx.fill(rect)
+//        backgroundColor = UIColor.random
+//        backgroundColor?.setFill()
+//        ctx.fill(rect)
+        
+        UIImage(named: "image01")?.draw(in: rect)
+        
     }
 }
