@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-9N-uww" customClass="MyView" customModule="drawRectImages" customModuleProvider="target">
+                                <rect key="frame" x="57" y="303" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="May-8F-67R"/>
+                                    <constraint firstAttribute="height" constant="300" id="Woh-jF-CP7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kke-9N-uww" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="T32-Tg-R5B"/>
+                            <constraint firstItem="Kke-9N-uww" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oKP-uS-ZQQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

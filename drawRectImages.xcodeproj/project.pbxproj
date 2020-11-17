@@ -13,6 +13,8 @@
 		7BA9150B25638B1700F55A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA9150925638B1700F55A5C /* Main.storyboard */; };
 		7BA9150D25638B1800F55A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA9150C25638B1800F55A5C /* Assets.xcassets */; };
 		7BA9151025638B1800F55A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA9150E25638B1800F55A5C /* LaunchScreen.storyboard */; };
+		7BA915232563948300F55A5C /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA915222563948300F55A5C /* MyView.swift */; };
+		7BA915262563957500F55A5C /* Ext+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA915252563957500F55A5C /* Ext+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7BA9150C25638B1800F55A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BA9150F25638B1800F55A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BA9151125638B1800F55A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA915222563948300F55A5C /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		7BA915252563957500F55A5C /* Ext+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				7BA9150C25638B1800F55A5C /* Assets.xcassets */,
 				7BA9150E25638B1800F55A5C /* LaunchScreen.storyboard */,
 				7BA9151125638B1800F55A5C /* Info.plist */,
+				7BA915222563948300F55A5C /* MyView.swift */,
+				7BA915252563957500F55A5C /* Ext+UIColor.swift */,
 			);
 			path = drawRectImages;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA915262563957500F55A5C /* Ext+UIColor.swift in Sources */,
+				7BA915232563948300F55A5C /* MyView.swift in Sources */,
 				7BA9150825638B1700F55A5C /* ViewController.swift in Sources */,
 				7BA9150425638B1700F55A5C /* AppDelegate.swift in Sources */,
 				7BA9150625638B1700F55A5C /* SceneDelegate.swift in Sources */,
