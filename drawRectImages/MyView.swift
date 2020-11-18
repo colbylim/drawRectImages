@@ -25,11 +25,6 @@ class MyView: UIView {
     }
 
     override func draw(_ rect: CGRect) {
-//        화면에 보이지 않고 있다면 return
-        if isVisible == false {
-            return
-        }
-        
         guard let ctx = UIGraphicsGetCurrentContext() else {
             return
         }
@@ -40,6 +35,12 @@ class MyView: UIView {
         backgroundColor = .systemBackground
         backgroundColor?.setFill()
         ctx.fill(rect)
+        
+//        화면에 보이지 않고 있다면 return
+        if isVisible == false {
+            ctx.restoreGState()
+            return
+        }
         
 //        4-1. 윤곽선의 꼭지점을 둥글게 처리
 //        앞으로 그려질때 clipping 되도록 함

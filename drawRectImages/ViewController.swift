@@ -30,6 +30,8 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
+        if imageCount == 0 { return }
+        
         for i in 1 ... imageCount {
             let v = MyView()
             v.translatesAutoresizingMaskIntoConstraints = false
@@ -79,6 +81,8 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if imageCount == 0 { return }
+        
         if let touch = touches.first as UITouch? {
             let endPoint = floor(touch.location(in: view).y)
             let oldPage = page
