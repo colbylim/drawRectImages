@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var stackViewTopLayoutConstraint: NSLayoutConstraint!
-
+    
     let imageCount: Int = 60
     lazy var maxPage: Int = {
         return Int((CGFloat(imageCount) / 4).rounded(.up) - 1)
@@ -54,8 +54,19 @@ class ViewController: UIViewController {
     
     func setMyViews(page: Int, isVisible: Bool) {
         let startIndex = page * 4
-        let endIndex = page != maxPage ? 4 : imageCount % 4
-        views[startIndex ..< startIndex + endIndex].forEach({
+        let endIndex: Int
+        if page != maxPage {
+            endIndex = startIndex + 4
+        } else {
+            let mod = imageCount % 4
+            if mod == 0 {
+                endIndex = startIndex + 4
+            } else {
+                endIndex = startIndex + mod
+            }
+        }
+        
+        views[startIndex ..< endIndex].forEach({
             $0.isVisible = isVisible
             $0.setNeedsDisplay()
         })
