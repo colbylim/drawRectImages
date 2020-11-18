@@ -16,24 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-9N-uww" customClass="MyView" customModule="drawRectImages" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zng-kg-htA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2jn-Cd-DJP">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2jn-Cd-DJP" secondAttribute="trailing" id="6xX-zw-1co"/>
+                                    <constraint firstItem="2jn-Cd-DJP" firstAttribute="leading" secondItem="zng-kg-htA" secondAttribute="leading" id="9dq-58-SVQ"/>
+                                    <constraint firstItem="2jn-Cd-DJP" firstAttribute="top" secondItem="zng-kg-htA" secondAttribute="top" id="TkT-y6-psD"/>
+                                    <constraint firstAttribute="bottom" secondItem="2jn-Cd-DJP" secondAttribute="bottom" placeholder="YES" id="crV-oI-ORb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kke-9N-uww" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ja8-U0-2kr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kke-9N-uww" secondAttribute="trailing" id="L37-S2-Lin"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kke-9N-uww" secondAttribute="bottom" id="VSN-zS-Ops"/>
-                            <constraint firstItem="Kke-9N-uww" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ur2-ci-lz2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zng-kg-htA" secondAttribute="trailing" id="Ffc-Pv-yRL"/>
+                            <constraint firstItem="zng-kg-htA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OcZ-9V-rFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zng-kg-htA" secondAttribute="bottom" id="jbZ-wf-rY4"/>
+                            <constraint firstItem="zng-kg-htA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vrG-jM-jzq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="stackView" destination="2jn-Cd-DJP" id="6Sr-Vq-fLq"/>
+                        <outlet property="stackViewTopLayoutConstraint" destination="TkT-y6-psD" id="pBe-ew-cnC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="82"/>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </scene>
     </scenes>
     <resources>
