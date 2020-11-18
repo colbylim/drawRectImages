@@ -42,6 +42,7 @@ class MyView: UIView {
         ctx.fill(rect)
         
 //        4-1. 윤곽선의 꼭지점을 둥글게 처리
+//        앞으로 그려질때 clipping 되도록 함
         let path = UIBezierPath(roundedRect: rect, cornerRadius: 10)
         ctx.addPath(path.cgPath)
         ctx.clip()
@@ -49,7 +50,7 @@ class MyView: UIView {
 //        3. 2번의 drawRect: 구현만 변경하여 주어진 PNG 파일 중 하나를 로드하여 화면에 표시하시오.
         let imageName = String(format: "image%02d", tag)
         UIImage(named: imageName)?.draw(in: rect)
-
+        
 //        4-2. 그 주변을 임의의 색깔을 가진 윤곽선으로 둘러싸시오.
         MyView.borderColor.setStroke()
         path.lineWidth = 10
